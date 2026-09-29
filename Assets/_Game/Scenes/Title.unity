@@ -668,6 +668,55 @@ MonoBehaviour:
   kingdomIndex: 0
   fadeSpeed: 6
   dropDistance: 24
+--- !u!1 &582523565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 582523567}
+  - component: {fileID: 582523566}
+  m_Layer: 0
+  m_Name: PostFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &582523566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582523565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: f9545ec149e1af345aa1f7c948eb5833, type: 2}
+--- !u!4 &582523567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582523565}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &608437075
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,23 +1008,23 @@ MonoBehaviour:
   - point: {x: 0.18, y: 0.125}
     dropOffY: 0.12
     interval: {x: 1.5, y: 5}
-    nextTime: 1.9032207
+    nextTime: 4.4704304
   - point: {x: 0.34, y: 0.075}
     dropOffY: 0.07
     interval: {x: 2, y: 6}
-    nextTime: 4.5158663
+    nextTime: 2.5338686
   - point: {x: 0.5, y: 0.03}
     dropOffY: 0.025
     interval: {x: 1.5, y: 4}
-    nextTime: 2.7639387
+    nextTime: 2.1924875
   - point: {x: 0.65, y: 0.07}
     dropOffY: 0.065
     interval: {x: 2, y: 6}
-    nextTime: 2.3800004
+    nextTime: 2.1231492
   - point: {x: 0.82, y: 0.115}
     dropOffY: 0.11
     interval: {x: 1.5, y: 5}
-    nextTime: 2.3126776
+    nextTime: 2.4206102
   banner: {fileID: 0}
   followUpChance: 0.49
   startJitter: 2
@@ -1118,6 +1167,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1014401476}
   - component: {fileID: 1014401477}
+  - component: {fileID: 1014401484}
+  - component: {fileID: 1014401483}
+  - component: {fileID: 1014401482}
+  - component: {fileID: 1014401481}
+  - component: {fileID: 1014401480}
+  - component: {fileID: 1014401479}
+  - component: {fileID: 1014401478}
   m_Layer: 5
   m_Name: TitleText
   m_TagString: Untagged
@@ -1164,20 +1220,20 @@ MonoBehaviour:
     top: {r: 1, g: 0.9529412, b: 0.8117647, a: 1}
     bottom: {r: 0.6901961, g: 0.47843137, b: 0.16470589, a: 1}
     glow: {r: 0, g: 0, b: 0, a: 0.5882353}
-  - font: {fileID: 11400000, guid: 0ca49e9837e86c645a84856a37f9c2df, type: 2}
+  - font: {fileID: 11400000, guid: 7b3391c9c941aef41bbd0b2028203cae, type: 2}
     sizeScale: 1.02
     letterSpacing: 0
     top: {r: 0.9372549, g: 0.89411765, b: 1, a: 1}
     bottom: {r: 0.35686275, g: 0.16470589, b: 0.53333336, a: 1}
     glow: {r: 0.47058824, g: 0.19607843, b: 0.74509805, a: 0.84313726}
-  - font: {fileID: 11400000, guid: d2706ddf8161a3144a1c355c389eb2c1, type: 2}
+  - font: {fileID: 11400000, guid: f2c27222901870e4fabf0018f0106fec, type: 2}
     sizeScale: 0.66
     letterSpacing: 4
     top: {r: 1, g: 0.9411765, b: 0.78431374, a: 1}
     bottom: {r: 0.6039216, g: 0.39607844, b: 0.15686275, a: 1}
     glow: {r: 0.8627451, g: 0.5882353, b: 0.23529412, a: 0.74509805}
-  - font: {fileID: 11400000, guid: 37646a08a4ae3b840bb4a1d21ae7744c, type: 2}
-    sizeScale: 0.78
+  - font: {fileID: 11400000, guid: 5fffa688f4b6a0a4a9da18b58ffc8d21, type: 2}
+    sizeScale: 0.7
     letterSpacing: 0
     top: {r: 1, g: 1, b: 1, a: 1}
     bottom: {r: 0.49803922, g: 0.69803923, b: 0.87058824, a: 1}
@@ -1189,6 +1245,191 @@ MonoBehaviour:
   tagline: Three kingdoms. One throne. Build the deck that claims it.
   hint: Choose your kingdom
   fadeSpeed: 5
+--- !u!114 &1014401478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014401475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a94701b96da91d944a2759ce8b2830a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TitleShine
+  faceFont: {fileID: 11400000, guid: 5fffa688f4b6a0a4a9da18b58ffc8d21, type: 2}
+  columns: 16
+  debug: 0
+  buildTime: 8
+  resetTime: 1
+  shineColor: {r: 1, g: 1, b: 1, a: 0.55}
+  interval: 6
+  sweepTime: 1.2
+  width: 0.14
+  lean: 0.5
+--- !u!114 &1014401479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014401475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a94701b96da91d944a2759ce8b2830a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TitleShine
+  faceFont: {fileID: 11400000, guid: f2c27222901870e4fabf0018f0106fec, type: 2}
+  columns: 16
+  debug: 0
+  buildTime: 8
+  resetTime: 1
+  shineColor: {r: 1, g: 0.973, b: 0.91, a: 0.55}
+  interval: 6
+  sweepTime: 1.2
+  width: 0.14
+  lean: 0.5
+--- !u!114 &1014401480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014401475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a94701b96da91d944a2759ce8b2830a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TitleShine
+  faceFont: {fileID: 11400000, guid: 7b3391c9c941aef41bbd0b2028203cae, type: 2}
+  columns: 16
+  debug: 0
+  buildTime: 8
+  resetTime: 1
+  shineColor: {r: 1, g: 1, b: 1, a: 0.55}
+  interval: 6
+  sweepTime: 1.2
+  width: 0.14
+  lean: 0.5
+--- !u!114 &1014401481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014401475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a94701b96da91d944a2759ce8b2830a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TitleShine
+  faceFont: {fileID: 11400000, guid: 777f27d9efdd46649bbde66d20f20ea1, type: 2}
+  columns: 16
+  debug: 0
+  buildTime: 8
+  resetTime: 1
+  shineColor: {r: 1, g: 0.973, b: 0.91, a: 0.55}
+  interval: 6
+  sweepTime: 1.2
+  width: 0.14
+  lean: 0.5
+--- !u!114 &1014401482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014401475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36880bcf1abf02c42886118d92a36e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TitleFrost
+  faceFont: {fileID: 11400000, guid: 5fffa688f4b6a0a4a9da18b58ffc8d21, type: 2}
+  columns: 16
+  debug: 0
+  buildTime: 14
+  resetTime: 1
+  sizeScale: 2.2
+  frostTint: {r: 0.9019608, g: 0.95686275, b: 1, a: 0.8509804}
+  crystalColor: {r: 1, g: 1, b: 1, a: 0.8509804}
+  crystalSize: {x: 3, y: 7}
+  edgeCrust: 1
+  maxSnowDepth: 7
+  snowColor: {r: 0.957, g: 0.973, b: 1, a: 0.95}
+  flakesPerSecond: 6
+  icicleDensity: 0.45
+  icicleLength: {x: 8, y: 26}
+  icicleWidth: 0.22
+  iceColor: {r: 0.812, g: 0.902, b: 1, a: 0.9}
+  iceTip: {r: 1, g: 1, b: 1, a: 0.3}
+  sparklesPerSecond: 3
+--- !u!114 &1014401483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014401475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f7649e8c5a2ad14b979f9d769f38826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TitleRain
+  faceFont: {fileID: 11400000, guid: f2c27222901870e4fabf0018f0106fec, type: 2}
+  columns: 16
+  debug: 0
+  buildTime: 8
+  resetTime: 1
+  sizeScale: 2.5
+  dropsPerSecond: 20
+  dropSpeed: 1800
+  slant: 10
+  dropColor: {r: 0.722, g: 0.784, b: 0.847, a: 0.5}
+  splashColor: {r: 0.8, g: 0.863, b: 0.925, a: 0.8}
+  tricklesPerSecond: 4
+  trickleSpeed: {x: 40, y: 90}
+  dripsPerSecond: 2
+  waterColor: {r: 0.843, g: 0.906, b: 0.965, a: 0.7}
+  wetTint: {r: 0.125, g: 0.173, b: 0.227, a: 0.3529412}
+--- !u!114 &1014401484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014401475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0695fb1d822874f890dddc51387f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TitleSmolder
+  faceFont: {fileID: 11400000, guid: 7b3391c9c941aef41bbd0b2028203cae, type: 2}
+  columns: 16
+  debug: 0
+  buildTime: 6
+  resetTime: 1
+  sizeScale: 2.2
+  emberRed: {r: 0.541, g: 0.071, b: 0.024, a: 0.85}
+  heatColor: {r: 1, g: 0.353, b: 0.078, a: 0.78431374}
+  flickerSpeed: 2.5
+  catchPoint: 0.5
+  flameDensity: 0.15
+  flameHeight: 0.4
+  flameWidth: 0.35
+  fireFlicker: 5
+  fireDeep: {r: 0.604, g: 0.11, b: 0.024, a: 0.8}
+  fireBase: {r: 0.886, g: 0.267, b: 0.059, a: 0.9}
+  fireTip: {r: 1, g: 0.769, b: 0.369, a: 0.35}
+  fireGlow: {r: 1, g: 0.353, b: 0.078, a: 0.3}
+  embersPerSecond: 25
+  emberSize: {x: 3, y: 6}
+  emberRise: {x: 30, y: 70}
+  emberLife: {x: 1.5, y: 3}
+  emberCore: {r: 1, g: 0.702, b: 0.278, a: 1}
+  emberGlow: {r: 1, g: 0.353, b: 0.078, a: 0.3}
+  smokePerSecond: 6
+  smokeColor: {r: 0.102, g: 0.078, b: 0.094, a: 0.2}
 --- !u!1 &1040567601
 GameObject:
   m_ObjectHideFlags: 0
@@ -1682,7 +1923,7 @@ MonoBehaviour:
     focusX: 0.5
     focusY: 0.35
     brightness: 0.852
-    tint: {r: 0.7529412, g: 0.5411765, b: 0.24313726, a: 0.1764706}
+    tint: {r: 0.2901961, g: 0.34509805, b: 0.4, a: 0.1764706}
   - id: snow
     image: {fileID: 5251734906795025119, guid: 66e148e3dd288ba4086dc739a0995328, type: 3}
     focusX: 0.5
@@ -1733,7 +1974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneMusic
   music: {fileID: 8300000, guid: 78d67c60af720484292b7a4f1f854d04, type: 3}
-  volume: 1
+  volume: 0.087
 --- !u!4 &1676941389
 Transform:
   m_ObjectHideFlags: 0
@@ -2232,19 +2473,19 @@ MonoBehaviour:
   - point: {x: 0.31, y: 0.36}
     dropOffY: 0.075
     interval: {x: 6, y: 15}
-    nextTime: 1.7227201
+    nextTime: 4.1249585
   - point: {x: 0.41, y: 0.298}
     dropOffY: 0.05
     interval: {x: 8, y: 19}
-    nextTime: 4.1909976
+    nextTime: 1.6265817
   - point: {x: 0.575, y: 0.298}
     dropOffY: 0.045
     interval: {x: 5, y: 13}
-    nextTime: 2.6694124
+    nextTime: 2.921592
   - point: {x: 0.68, y: 0.35}
     dropOffY: 0.07
     interval: {x: 10, y: 22}
-    nextTime: 2.965824
+    nextTime: 1.6141486
   banner: {fileID: 0}
   followUpChance: 0.3
   startJitter: 2
@@ -2380,7 +2621,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -2410,3 +2651,4 @@ SceneRoots:
   - {fileID: 153754268}
   - {fileID: 1676941389}
   - {fileID: 1766609288}
+  - {fileID: 582523567}
