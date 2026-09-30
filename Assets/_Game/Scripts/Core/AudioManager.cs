@@ -16,6 +16,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] float crossfadeTime = 1.5f;
 
     const string MuteKey = "tc-muted";
+    const string MasterKey = "tc-master";
+    const string MusicKey = "tc-music";
+    const string SfxKey = "tc-sfx";
 
     class Channel
     {
@@ -46,6 +49,18 @@ public class AudioManager : MonoBehaviour
         sfx = gameObject.AddComponent<AudioSource>();
         sfx.playOnAwake = false;
         Muted = PlayerPrefs.GetInt(MuteKey, 0) == 1;
+        masterVolume = PlayerPrefs.GetFloat(MasterKey, masterVolume);
+        musicVolume = PlayerPrefs.GetFloat(MusicKey, musicVolume);
+        sfxVolume = PlayerPrefs.GetFloat(SfxKey, sfxVolume);
+    }
+
+    // Remembers the three volumes for the next time the game starts
+    public void SaveVolumes()
+    {
+        PlayerPrefs.SetFloat(MasterKey, masterVolume);
+        PlayerPrefs.SetFloat(MusicKey, musicVolume);
+        PlayerPrefs.SetFloat(SfxKey, sfxVolume);
+        PlayerPrefs.Save();
     }
 
     Channel MakeChannel()

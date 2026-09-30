@@ -319,7 +319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &629616679
 RectTransform:
   m_ObjectHideFlags: 0
@@ -353,6 +353,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
   sceneName: Title
+  throughDoor: 0
+  zoomTarget: {x: 0.27, y: 0.62}
 --- !u!114 &629616681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,6 +437,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629616678}
   m_CullTransparentMesh: 1
+--- !u!1 &700682816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 700682818}
+  - component: {fileID: 700682817}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &700682817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700682816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: f9545ec149e1af345aa1f7c948eb5833, type: 2}
+--- !u!4 &700682818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700682816}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.4761987, y: 0.90703, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1676941387
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,7 +516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneMusic
   music: {fileID: 8300000, guid: bfd437c011b6a4441ae59a0fd2dc963d, type: 3}
-  volume: 1
+  volume: 0.08
 --- !u!4 &1676941389
 Transform:
   m_ObjectHideFlags: 0
@@ -658,7 +709,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.02745098, g: 0.019607844, b: 0.043137256, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -737,7 +788,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -769,8 +820,10 @@ GameObject:
   - component: {fileID: 2082474208}
   - component: {fileID: 2082474207}
   - component: {fileID: 2082474206}
+  - component: {fileID: 2082474210}
+  - component: {fileID: 2082474209}
   m_Layer: 0
-  m_Name: dark_0
+  m_Name: ThroneRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -790,7 +843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CoverCamera
   fit: 0
   focusX: 0.5
-  focusY: 0.7
+  focusY: 0.5
   extraZoom: 1
 --- !u!212 &2082474207
 SpriteRenderer:
@@ -841,7 +894,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6729511157232288408, guid: 8ad4a8fcf402c6341960b3a899f1b93a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec4a1bac45363f943a1bd03b188a181f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -860,12 +913,139 @@ Transform:
   m_GameObject: {fileID: 2082474205}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.9387553, z: 0}
-  m_LocalScale: {x: 1.3278009, y: 1.3278009, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.80357146, y: 0.80357146, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2082474209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082474205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d93774e0711a0664d9e9a6264c67c918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomAmbience
+  flames:
+  - pos: {x: 0.385, y: 0.45}
+    size: 0.14
+    color: {r: 0.69, g: 0.439, b: 1, a: 1}
+  - pos: {x: 0.556, y: 0.45}
+    size: 0.14
+    color: {r: 0.69, g: 0.439, b: 1, a: 1}
+  - pos: {x: 0.1, y: 0.32}
+    size: 0.06
+    color: {r: 1, g: 0.706, b: 0.353, a: 1}
+  - pos: {x: 0.2, y: 0.36}
+    size: 0.05
+    color: {r: 1, g: 0.706, b: 0.353, a: 1}
+  - pos: {x: 0.275, y: 0.39}
+    size: 0.05
+    color: {r: 1, g: 0.706, b: 0.353, a: 1}
+  - pos: {x: 0.33, y: 0.4}
+    size: 0.045
+    color: {r: 1, g: 0.706, b: 0.353, a: 1}
+  - pos: {x: 0.84, y: 0.39}
+    size: 0.045
+    color: {r: 1, g: 0.706, b: 0.353, a: 1}
+  - pos: {x: 0.93, y: 0.35}
+    size: 0.05
+    color: {r: 1, g: 0.706, b: 0.353, a: 1}
+  - pos: {x: 0.843, y: 0.59}
+    size: 0.07
+    color: {r: 1, g: 0.706, b: 0.353, a: 1}
+  - pos: {x: 0.953, y: 0.7}
+    size: 0.08
+    color: {r: 1, g: 0.706, b: 0.353, a: 1}
+  flameStrength: 0.35
+  flickerSpeed: 6
+  wellCenter: {x: 0.575, y: 0.8}
+  wispCount: 36
+  wispGreen: {r: 0.624, g: 0.961, b: 0.784, a: 1}
+  wispViolet: {r: 0.706, g: 0.549, b: 1, a: 1}
+  wispStrength: 0.6
+  fogCount: 9
+  fogColor: {r: 0.549, g: 0.498, b: 0.627, a: 0.12}
+--- !u!114 &2082474210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082474205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68778e50e48c6744f834be7694b9f232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThroneRoom
+  zones:
+  - name: The Soul Well
+    subtitle: Souls gathered from the fallen
+    area: {x: 0.48, y: 0.57, z: 0.66, w: 1}
+    glow: {r: 0.624, g: 0.961, b: 0.784, a: 1}
+    sceneToLoad: 
+    onClick:
+      m_PersistentCalls:
+        m_Calls: []
+    hover: 0
+    glowRenderer: {fileID: 0}
+  - name: The War Table
+    subtitle: Choose your next battle
+    area: {x: 0.73, y: 0.49, z: 1, w: 0.9}
+    glow: {r: 1, g: 0.769, b: 0.42, a: 1}
+    sceneToLoad: 
+    onClick:
+      m_PersistentCalls:
+        m_Calls: []
+    hover: 0
+    glowRenderer: {fileID: 0}
+  - name: The Bone Archive
+    subtitle: Raise the souls you have taken
+    area: {x: 0, y: 0.09, z: 0.33, w: 0.74}
+    glow: {r: 0.608, g: 0.42, b: 0.878, a: 1}
+    sceneToLoad: 
+    onClick:
+      m_PersistentCalls:
+        m_Calls: []
+    hover: 0
+    glowRenderer: {fileID: 0}
+  - name: The Throne
+    subtitle: Morvane the Bone-Caller
+    area: {x: 0.34, y: 0.13, z: 0.62, w: 0.75}
+    glow: {r: 0.541, g: 0.31, b: 0.847, a: 1}
+    sceneToLoad: 
+    onClick:
+      m_PersistentCalls:
+        m_Calls: []
+    hover: 0
+    glowRenderer: {fileID: 0}
+  - name: The Great Door
+    subtitle: Return to the kingdoms
+    area: {x: 0.645, y: 0.22, z: 0.79, w: 0.63}
+    glow: {r: 0.627, g: 0.706, b: 0.816, a: 1}
+    sceneToLoad: Title
+    onClick:
+      m_PersistentCalls:
+        m_Calls: []
+    hover: 0
+    glowRenderer: {fileID: 0}
+  entranceZoom: 0.92
+  entranceTime: 0.6
+  panStrength: 1
+  panSpeed: 3
+  glowStrength: 0.22
+  showZones: 0
+  uiCanvas: {fileID: 0}
+  headerFont: {fileID: 11400000, guid: f2c27222901870e4fabf0018f0106fec, type: 2}
+  textFont: {fileID: 11400000, guid: 17ad724767155d0448ee8ccc0775199c, type: 2}
+  labelLift: 16
+  hoverSound: {fileID: 0}
+  clickSound: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -875,3 +1055,4 @@ SceneRoots:
   - {fileID: 340087215}
   - {fileID: 153754268}
   - {fileID: 1676941389}
+  - {fileID: 700682818}

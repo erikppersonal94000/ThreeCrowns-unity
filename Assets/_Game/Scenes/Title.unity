@@ -303,6 +303,7 @@ GameObject:
   - component: {fileID: 340087214}
   - component: {fileID: 340087213}
   - component: {fileID: 340087212}
+  - component: {fileID: 340087216}
   m_Layer: 5
   m_Name: UICanvas
   m_TagString: Untagged
@@ -397,6 +398,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &340087216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340087211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0327bb1504b3e7048837cd6082e8c285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TitleMenu
+  panels: {fileID: 0}
+  textFont: {fileID: 11400000, guid: 17ad724767155d0448ee8ccc0775199c, type: 2}
+  headerFont: {fileID: 11400000, guid: f2c27222901870e4fabf0018f0106fec, type: 2}
+  textColor: {r: 0.788, g: 0.749, b: 0.682, a: 1}
+  hoverColor: {r: 1, g: 1, b: 1, a: 1}
+  accent: {r: 0.788, g: 0.643, b: 0.361, a: 1}
+  dimColor: {r: 0, g: 0, b: 0, a: 0.6}
+  cornerMargin: {x: 36, y: 14}
+  cornerTextSize: 26
+  cornerSpacing: 36
+  rowTextSize: 30
+  clickSound: {fileID: 0}
+  hoverSound: {fileID: 0}
 --- !u!1 &385567469
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +609,7 @@ GameObject:
   - component: {fileID: 530294943}
   - component: {fileID: 530294942}
   - component: {fileID: 530294944}
+  - component: {fileID: 530294945}
   m_Layer: 5
   m_Name: DuskmoorBanner
   m_TagString: Untagged
@@ -668,6 +695,42 @@ MonoBehaviour:
   kingdomIndex: 0
   fadeSpeed: 6
   dropDistance: 24
+--- !u!114 &530294945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530294940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42bd38215f6ad7d4285f91f0117c2cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KingdomInfo
+  panels: {fileID: 0}
+  kingdomIndex: 0
+  kingdomName: Duskmoor
+  motto: The dead do not rest. Neither will you.
+  nameFont: {fileID: 11400000, guid: 7b3391c9c941aef41bbd0b2028203cae, type: 2}
+  mottoFont: {fileID: 11400000, guid: 17ad724767155d0448ee8ccc0775199c, type: 2}
+  buttonFont: {fileID: 11400000, guid: f2c27222901870e4fabf0018f0106fec, type: 2}
+  nameTop: {r: 0.949, g: 0.933, b: 0.965, a: 1}
+  nameBottom: {r: 0.353, g: 0.314, b: 0.4, a: 1}
+  mottoColor: {r: 0.788, g: 0.749, b: 0.839, a: 1}
+  accent: {r: 0.541, g: 0.31, b: 0.847, a: 1}
+  offset: {x: 0, y: 0}
+  width: 460
+  nameSize: 60
+  mottoSize: 30
+  buttonTextSize: 26
+  buttonSize: {x: 260, y: 58}
+  unlocked: 1
+  enterLabel: ENTER
+  lockedLabel: COMING SOON
+  sceneButton: {fileID: 629616681}
+  appearDelay: 0.3
+  stagger: 0.15
+  fadeTime: 0.35
 --- !u!1 &582523565
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,7 +894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &629616679
 RectTransform:
   m_ObjectHideFlags: 0
@@ -865,6 +928,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
   sceneName: Duskmoor
+  throughDoor: 1
+  zoomTarget: {x: 0.26, y: 0.78}
 --- !u!114 &629616681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1008,23 +1073,23 @@ MonoBehaviour:
   - point: {x: 0.18, y: 0.125}
     dropOffY: 0.12
     interval: {x: 1.5, y: 5}
-    nextTime: 4.4704304
+    nextTime: 3.733119
   - point: {x: 0.34, y: 0.075}
     dropOffY: 0.07
     interval: {x: 2, y: 6}
-    nextTime: 2.5338686
+    nextTime: 3.9762754
   - point: {x: 0.5, y: 0.03}
     dropOffY: 0.025
     interval: {x: 1.5, y: 4}
-    nextTime: 2.1924875
+    nextTime: 2.6772373
   - point: {x: 0.65, y: 0.07}
     dropOffY: 0.065
     interval: {x: 2, y: 6}
-    nextTime: 2.1231492
+    nextTime: 2.291723
   - point: {x: 0.82, y: 0.115}
     dropOffY: 0.11
     interval: {x: 1.5, y: 5}
-    nextTime: 2.4206102
+    nextTime: 2.0453498
   banner: {fileID: 0}
   followUpChance: 0.49
   startJitter: 2
@@ -1057,6 +1122,7 @@ GameObject:
   - component: {fileID: 793183525}
   - component: {fileID: 793183526}
   - component: {fileID: 793183528}
+  - component: {fileID: 793183529}
   m_Layer: 5
   m_Name: StonehelmBanner
   m_TagString: Untagged
@@ -1157,6 +1223,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Mask
   m_ShowMaskGraphic: 1
+--- !u!114 &793183529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793183523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42bd38215f6ad7d4285f91f0117c2cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KingdomInfo
+  panels: {fileID: 0}
+  kingdomIndex: 1
+  kingdomName: STONEHELM
+  motto: "   Carved from the mountain.\r\n   Unbroken by the storm."
+  nameFont: {fileID: 11400000, guid: f2c27222901870e4fabf0018f0106fec, type: 2}
+  mottoFont: {fileID: 11400000, guid: 17ad724767155d0448ee8ccc0775199c, type: 2}
+  buttonFont: {fileID: 11400000, guid: f2c27222901870e4fabf0018f0106fec, type: 2}
+  nameTop: {r: 1, g: 0.94509804, b: 0.8, a: 1}
+  nameBottom: {r: 0.47843137, g: 0.2901961, b: 0.09411765, a: 1}
+  mottoColor: {r: 0.8509804, g: 0.79607844, b: 0.6901961, a: 1}
+  accent: {r: 0.78431374, g: 0.5647059, b: 0.23529412, a: 1}
+  offset: {x: 0, y: 0}
+  width: 460
+  nameSize: 60
+  mottoSize: 30
+  buttonTextSize: 26
+  buttonSize: {x: 260, y: 58}
+  unlocked: 0
+  enterLabel: ENTER
+  lockedLabel: COMING SOON
+  sceneButton: {fileID: 0}
+  appearDelay: 0.3
+  stagger: 0.15
+  fadeTime: 0.35
 --- !u!1 &1014401475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,6 +1542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1040567602}
   - component: {fileID: 1040567603}
+  - component: {fileID: 1040567604}
   m_Layer: 5
   m_Name: FrostvalePlate
   m_TagString: Untagged
@@ -1484,6 +1587,42 @@ MonoBehaviour:
   kingdomIndex: 2
   fadeSpeed: 6
   dropDistance: 24
+--- !u!114 &1040567604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040567601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42bd38215f6ad7d4285f91f0117c2cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KingdomInfo
+  panels: {fileID: 0}
+  kingdomIndex: 2
+  kingdomName: Frostvale
+  motto: Where winter never ends, neither do we.
+  nameFont: {fileID: 11400000, guid: 5fffa688f4b6a0a4a9da18b58ffc8d21, type: 2}
+  mottoFont: {fileID: 11400000, guid: 17ad724767155d0448ee8ccc0775199c, type: 2}
+  buttonFont: {fileID: 11400000, guid: 5fffa688f4b6a0a4a9da18b58ffc8d21, type: 2}
+  nameTop: {r: 1, g: 1, b: 1, a: 1}
+  nameBottom: {r: 0.2901961, g: 0.50980395, b: 0.7372549, a: 1}
+  mottoColor: {r: 0.8117647, g: 0.8901961, b: 0.9607843, a: 1}
+  accent: {r: 0.56078434, g: 0.8156863, b: 1, a: 1}
+  offset: {x: 0, y: 0}
+  width: 460
+  nameSize: 60
+  mottoSize: 30
+  buttonTextSize: 26
+  buttonSize: {x: 260, y: 58}
+  unlocked: 0
+  enterLabel: ENTER
+  lockedLabel: COMING SOON
+  sceneButton: {fileID: 0}
+  appearDelay: 0.3
+  stagger: 0.15
+  fadeTime: 0.35
 --- !u!1 &1127962225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1974,7 +2113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneMusic
   music: {fileID: 8300000, guid: 78d67c60af720484292b7a4f1f854d04, type: 3}
-  volume: 0.087
+  volume: 0.08
 --- !u!4 &1676941389
 Transform:
   m_ObjectHideFlags: 0
@@ -2473,19 +2612,19 @@ MonoBehaviour:
   - point: {x: 0.31, y: 0.36}
     dropOffY: 0.075
     interval: {x: 6, y: 15}
-    nextTime: 4.1249585
+    nextTime: 3.2809722
   - point: {x: 0.41, y: 0.298}
     dropOffY: 0.05
     interval: {x: 8, y: 19}
-    nextTime: 1.6265817
+    nextTime: 3.3903968
   - point: {x: 0.575, y: 0.298}
     dropOffY: 0.045
     interval: {x: 5, y: 13}
-    nextTime: 2.921592
+    nextTime: 3.0510128
   - point: {x: 0.68, y: 0.35}
     dropOffY: 0.07
     interval: {x: 10, y: 22}
-    nextTime: 1.6141486
+    nextTime: 1.0362868
   banner: {fileID: 0}
   followUpChance: 0.3
   startJitter: 2
