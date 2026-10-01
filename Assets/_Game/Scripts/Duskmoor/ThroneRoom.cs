@@ -104,31 +104,20 @@ public class ThroneRoom : MonoBehaviour
         }
     }
 
-    // Seen far away through the doorway, grow as the player walks in, then settle to normal
+    // Arrive slightly zoomed in, then settle back as the room fades in, like stepping inside
     IEnumerator StepIn()
     {
         var loader = SceneLoader.Instance;
-
-        // While the room is smaller than the screen, sit it on the bottom edge so its floor meets
-        // the doorway; the leftover gap goes to the top, behind the arch
-        float normalFocusY = cover.focusY;
-        cover.focusY = 1f;
-
-        while (loader != null && loader.IsBusy)
-        {
-            cover.extraZoom = entranceZoom * (loader.Revealing ? loader.RoomScale : 1f);
-            yield return null;
-        }
-        float from = cover.extraZoom;
+        cover.extraZoom = entranceZoom;
+        while (loader != null && loader.IsBusy && !loader.Revealing) yield return null;
         for (float t = 0f; t < entranceTime; t += Time.unscaledDeltaTime)
         {
             float k = t / entranceTime;
             float e = 1f - (1f - k) * (1f - k) * (1f - k);
-            cover.extraZoom = Mathf.Lerp(from, 1f, e);
+            cover.extraZoom = Mathf.Lerp(entranceZoom, 1f, e);
             yield return null;
         }
         cover.extraZoom = 1f;
-        cover.focusY = normalFocusY;
     }
 
     SpriteRenderer MakeGlow(Zone z)
@@ -162,6 +151,8 @@ public class ThroneRoom : MonoBehaviour
         {
             float t = Mathf.Clamp01(mp.x / Mathf.Max(1f, Screen.width));
             float target = 0.5f + (t - 0.5f) * panStrength;
+            // Hold the center view during a transition, so the door video's last frame lines up
+            if (SceneLoader.Instance != null && SceneLoader.Instance.IsBusy) target = 0.5f;
             cover.focusX = Mathf.Lerp(cover.focusX, target, 1f - Mathf.Exp(-panSpeed * dt));
         }
 

@@ -998,7 +998,7 @@ MonoBehaviour:
     subtitle: Choose your next battle
     area: {x: 0.73, y: 0.49, z: 1, w: 0.9}
     glow: {r: 1, g: 0.769, b: 0.42, a: 1}
-    sceneToLoad: 
+    sceneToLoad: Campaign
     onClick:
       m_PersistentCalls:
         m_Calls: []
@@ -1034,8 +1034,8 @@ MonoBehaviour:
         m_Calls: []
     hover: 0
     glowRenderer: {fileID: 0}
-  entranceZoom: 0.92
-  entranceTime: 0.6
+  entranceZoom: 1.15
+  entranceTime: 1.6
   panStrength: 1
   panSpeed: 3
   glowStrength: 0.22

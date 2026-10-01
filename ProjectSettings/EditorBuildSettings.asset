@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Game/Scenes/Duskmoor.unity
     guid: 67e87e76f4664fd4ca111aa5eaf73d7f
+  - enabled: 1
+    path: Assets/_Game/Scenes/Campaign/Campaign.unity
+    guid: de6a0afb659976f4896aa1281b361fd1
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

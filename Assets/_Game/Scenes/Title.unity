@@ -928,7 +928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
   sceneName: Duskmoor
-  throughDoor: 1
+  throughDoor: 0
   zoomTarget: {x: 0.26, y: 0.78}
 --- !u!114 &629616681
 MonoBehaviour:
@@ -1073,23 +1073,23 @@ MonoBehaviour:
   - point: {x: 0.18, y: 0.125}
     dropOffY: 0.12
     interval: {x: 1.5, y: 5}
-    nextTime: 3.733119
+    nextTime: 4.4867744
   - point: {x: 0.34, y: 0.075}
     dropOffY: 0.07
     interval: {x: 2, y: 6}
-    nextTime: 3.9762754
+    nextTime: 3.1099913
   - point: {x: 0.5, y: 0.03}
     dropOffY: 0.025
     interval: {x: 1.5, y: 4}
-    nextTime: 2.6772373
+    nextTime: 3.6133385
   - point: {x: 0.65, y: 0.07}
     dropOffY: 0.065
     interval: {x: 2, y: 6}
-    nextTime: 2.291723
+    nextTime: 1.5167894
   - point: {x: 0.82, y: 0.115}
     dropOffY: 0.11
     interval: {x: 1.5, y: 5}
-    nextTime: 2.0453498
+    nextTime: 3.275232
   banner: {fileID: 0}
   followUpChance: 0.49
   startJitter: 2
@@ -2612,19 +2612,19 @@ MonoBehaviour:
   - point: {x: 0.31, y: 0.36}
     dropOffY: 0.075
     interval: {x: 6, y: 15}
-    nextTime: 3.2809722
+    nextTime: 1.9694467
   - point: {x: 0.41, y: 0.298}
     dropOffY: 0.05
     interval: {x: 8, y: 19}
-    nextTime: 3.3903968
+    nextTime: 4.690187
   - point: {x: 0.575, y: 0.298}
     dropOffY: 0.045
     interval: {x: 5, y: 13}
-    nextTime: 3.0510128
+    nextTime: 1.7184668
   - point: {x: 0.68, y: 0.35}
     dropOffY: 0.07
     interval: {x: 10, y: 22}
-    nextTime: 1.0362868
+    nextTime: 1.4095478
   banner: {fileID: 0}
   followUpChance: 0.3
   startJitter: 2

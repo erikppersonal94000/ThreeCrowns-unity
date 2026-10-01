@@ -65,22 +65,9 @@ MonoBehaviour:
   fadeInTime: 0.6
   zoomTime: 0.6
   zoomAmount: 6
-  approachTime: 0.8
-  openTime: 5
-  stepTime: 1.8
-  roomDistance: 9
-  walkDistance: 0.9
-  doorwayDarkness: 0.85
-  unlatchTime: 0.3
-  unlatchPause: 0.2
-  shakeAmount: 10
-  lightColor: {r: 0.722, g: 0.549, b: 1, a: 1}
-  hingeLeft: 0.383
-  hingeRight: 0.619
-  seam: 0.501
-  doorBottom: 0.099
-  doorTop: 0.794
-  doorway: {x: 0.501, y: 0.45}
+  doorVideo: {fileID: 32900000, guid: fe671e2c835360c47907f1f0470528cc, type: 3}
+  videoFadeIn: 0.25
+  videoFadeOut: 0.5
+  switchAt: 0.3
   whooshSound: {fileID: 0}
-  doorOpenSound: {fileID: 0}
-  doorBoomSound: {fileID: 0}
+  doorSound: {fileID: 0}
